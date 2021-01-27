@@ -16,8 +16,16 @@ if (isset($_POST['Login'])) {
  		//MENUJU KE HALAMAN PEMERIKSAAN SESION
  		echo "<h1> Anda Berhasil Login</h1>";
  		echo "<h2> Klik <a href ='session2.php'>Di sini(session2.php)</a>";
- 	}
- } else {
+ 		}else{
+ 			die("User nama atau Password salah
+ 				silahkan kembali login <a href ='session1.php>Login</a>')");}
+
+ 		}elseif ($_SESSION['Login']) {
+ 		echo "<script>";
+ 		echo "alert('Anda Sudah Login');
+ 			window.location.href='session2.php'";
+ 			"</script>";
+ 	}else {
  ?>
  <html>
  <head>
